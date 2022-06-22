@@ -5,8 +5,8 @@ function HomeScreen({ navigation }) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Button
-        onPress={() => navigation.navigate('Home')}
-        title="Go to home screen again"
+        onPress={() => navigation.navigate('Profile')}
+        title="Go to profile screen"
       />
     </View>
   );
