@@ -1,15 +1,19 @@
 import React from 'react';
-import { Button, View } from 'react-native';
+import {View} from 'react-native';
+import {VStack, Text, Input} from 'native-base';
 
-function HomeScreen({ navigation }) {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Button
-        onPress={() => navigation.navigate('Profile')}
-        title="Go to profile screen"
-      />
-    </View>
-  );
+function HomeScreen() {
+    return (
+        <View>
+            <VStack alignItems="center" space={4} p={4}>
+                <Input
+                    w="75%"
+                    placeholder="Search"
+                />
+                <Text>Home</Text>
+            </VStack>
+        </View>
+    );
 }
 
 export default HomeScreen;
