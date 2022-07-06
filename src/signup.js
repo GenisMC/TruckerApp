@@ -37,9 +37,14 @@ class Signup extends Component {
       email: this.state.email,
       password: this.state.password,
     }
-    axios.post('http://localhost:4000/api/signup', registered).then(res => {
-      console.log(res.data)
-    })
+    axios
+      .post('http://192.168.1.107:4000/api/signup', registered)
+      .then(res => {
+        console.log(res)
+      })
+      .catch(err => {
+        console.log(err)
+      })
     this.setState({
       fullName: '',
       username: '',
@@ -84,7 +89,7 @@ class Signup extends Component {
             value={this.state.password}
             onChangeText={this.changePassword}
           />
-          <Button colorScheme="success" onClick={this.onSubmit}>
+          <Button colorScheme="success" onPress={this.onSubmit}>
             Success
           </Button>
         </Stack>

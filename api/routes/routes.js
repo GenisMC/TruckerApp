@@ -15,9 +15,11 @@ router.post("/signup", async (req, res) => {
   signUpUser
     .save()
     .then(data => {
+      console.log(data)
       res.json(data)
     })
     .catch(err => {
+      console.log(err)
       res.json(err)
     })
 })
